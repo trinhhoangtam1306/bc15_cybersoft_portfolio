@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: "Hind" ,sans-serif;
+    font-size: 14px;
+}
+
+/* header */
+header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+}
+
+header .navbar-brand span {
+    font-size: 2.5rem;
+}
+
+header .navbar-brand i {
+    color: #35a22c;
+}
+
+header .navbar-nav .nav-item {
+    margin: 0 10px;
+}
+
+header .navbar-nav .nav-link {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+header .navbar-nav .nav-item.active .nav-link {
+    color: #35a22c;
+}
+
+header .navbar-nav .nav-item::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #35a22c;
+    transition: all 0.5s;
+}
+
+header .navbar-nav .nav-item.active::after {
+    width: 100%;
+}
+
+header .navbar-nav .nav-item:hover::after {
+    width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+    header .navbar-brand span {
+        font-size: 1.5rem;
+    }
+
+    header .navbar-brand i {
+        font-size: 2rem;
+    }
+  }
+
+  /* carousel */
+  #carousel .carousel-item {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+  }
+
+  #carousel .carousel-item:nth-child(1) {
+    background-image: url(../images/finland.jpg);
+  }
+
+  #carousel .carousel-item:nth-child(2) {
+    background-image: url(../images/mountains.jpg);
+}
+
+#carousel .carousel-item:nth-child(3) {
+    background-image: url(../images/mountains-1.jpg);  
+}
+
+#carousel .carousel__thumb {
+    width: 150px;
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    margin: auto;
+}
+
+#carousel .carousel__thumb img {
+    width: 100%;
+    border-radius: 50%;
+    border: 5px solid #80808073;
+}
+
+#carousel .carousel__content h1 {
+    font-size: 4rem;
+}
+
+#carousel .carousel__content p {
+    font-size: 2rem;
+}
+
+#carousel .carousel__content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#carousel .carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    margin-bottom: 10%;
+}
+
+#carousel .carousel-indicators li.active {
+    background-color: #35a22c;
+}
+
+/* welcome */
+#welcome {
+    position: relative;
+}
+
+#welcome .overlay {
+    position: absolute;
+    background-image: url("./../images/memphis_2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    opacity: .5;
+}
+
+.progress {
+    height: 0.3rem;
+}
+
+.aos-animate .progress-bar {
+    background: linear-gradient(to right, #35a22c,#0ea8cf);
+    animation-name: progress;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes progress {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* feature */
+#feature {
+    position: relative;
+    background-image: url('./../images/3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+    color: #fff;
+    padding: 8rem 0;
+}
+
+#feature .overlay {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000008c;
+}
